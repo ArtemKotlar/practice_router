@@ -18,7 +18,7 @@ const NavItem = styled(NavLink)`
   }
 `;
 
-export const Invoices = () => {
+const Invoices = () => {
   const [invoices, setInvoices] = useState([]);
 
   useEffect(() => {
@@ -44,3 +44,5 @@ export const Invoices = () => {
     </Box>
   );
 };
+
+export default Invoices;

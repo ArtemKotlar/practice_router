@@ -1,12 +1,14 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout';
 import { Toaster } from 'react-hot-toast';
-import { Sales } from 'pages/Sales';
-import { Invoices } from './Invoice/Invoices';
 import { GlobalStyle } from './GlobalStyle';
 import { InvoiceDetails } from './Invoice/InvoiceDetails';
-import { Customers } from 'pages/Customers/Customers';
 import { CustomerDetails } from 'pages/Customers/CustomerDetails';
+import { lazy } from 'react';
+
+const Sales = lazy(() => import('../pages/Sales'));
+const Invoices = lazy(() => import('./Invoice/Invoices'));
+const Customers = lazy(() => import('../pages/Customers/Customers'));
 
 export const App = () => {
   return (
